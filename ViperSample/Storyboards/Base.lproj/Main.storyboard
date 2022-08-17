@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ViperSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QGD-tf-jhv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="QxV-bX-e4t"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SzR-b7-hwA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QGD-tf-jhv" secondAttribute="trailing" id="AKb-hX-PQk"/>
+                            <constraint firstItem="QGD-tf-jhv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UZu-CS-kvb"/>
+                            <constraint firstAttribute="bottom" secondItem="QGD-tf-jhv" secondAttribute="bottom" id="ejW-Jz-wmU"/>
+                            <constraint firstItem="QGD-tf-jhv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lLm-yB-aQE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FPf-P4-gcp"/>
+                    <connections>
+                        <outlet property="tableView" destination="QGD-tf-jhv" id="Beo-pR-eqs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="20.758928571428569"/>
+        </scene>
+        <!--Create Post Controller-->
+        <scene sceneID="GXg-FS-W7e">
+            <objects>
+                <viewController storyboardIdentifier="CreatePostController" id="8j4-f5-yJb" customClass="CreatePostController" customModule="ViperSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ivZ-Uz-r0n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQA-AM-svx">
+                                <rect key="frame" x="20" y="54" width="374" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZUm-vp-i0D">
+                                        <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ifh-dN-fCA"/>
+                                            <constraint firstAttribute="width" constant="40" id="NPM-AC-1qT"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write your caption here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOr-l5-kcY">
+                                        <rect key="frame" x="55" y="21" width="309" height="18.5"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XOr-l5-kcY" secondAttribute="trailing" constant="10" id="09S-iE-UeK"/>
+                                    <constraint firstAttribute="height" constant="60" id="Lwo-Nt-Cqp"/>
+                                    <constraint firstItem="XOr-l5-kcY" firstAttribute="leading" secondItem="ZUm-vp-i0D" secondAttribute="trailing" constant="15" id="c3W-BU-RRm"/>
+                                    <constraint firstItem="ZUm-vp-i0D" firstAttribute="centerY" secondItem="eQA-AM-svx" secondAttribute="centerY" id="eBa-F6-Hop"/>
+                                    <constraint firstItem="XOr-l5-kcY" firstAttribute="centerY" secondItem="ZUm-vp-i0D" secondAttribute="centerY" id="llc-R1-4v2"/>
+                                    <constraint firstItem="ZUm-vp-i0D" firstAttribute="leading" secondItem="eQA-AM-svx" secondAttribute="leading" id="uNL-TE-ZvN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26N-5a-xvs">
+                                <rect key="frame" x="20" y="174" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImageAction:" destination="8j4-f5-yJb" eventType="touchUpInside" id="bAX-8M-eYp"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zmc-qg-g1a">
+                                <rect key="frame" x="20.5" y="224" width="373" height="186.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zmc-qg-g1a" secondAttribute="height" multiplier="2:1" id="A2c-OX-P24"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="haD-XZ-KtJ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="26N-5a-xvs" firstAttribute="leading" secondItem="eQA-AM-svx" secondAttribute="leading" id="7dY-Ra-ykD"/>
+                            <constraint firstItem="26N-5a-xvs" firstAttribute="top" secondItem="eQA-AM-svx" secondAttribute="bottom" constant="60" id="DDW-JE-KBB"/>
+                            <constraint firstItem="eQA-AM-svx" firstAttribute="leading" secondItem="haD-XZ-KtJ" secondAttribute="leading" constant="20" id="KUG-xy-tVy"/>
+                            <constraint firstItem="eQA-AM-svx" firstAttribute="top" secondItem="haD-XZ-KtJ" secondAttribute="top" constant="10" id="KsJ-b6-lRB"/>
+                            <constraint firstItem="zmc-qg-g1a" firstAttribute="width" secondItem="haD-XZ-KtJ" secondAttribute="width" multiplier="0.9" id="UxQ-2F-iCv"/>
+                            <constraint firstItem="haD-XZ-KtJ" firstAttribute="trailing" secondItem="eQA-AM-svx" secondAttribute="trailing" constant="20" id="ZdC-0P-FCX"/>
+                            <constraint firstItem="zmc-qg-g1a" firstAttribute="top" secondItem="26N-5a-xvs" secondAttribute="bottom" constant="20" id="oHT-0P-RHv"/>
+                            <constraint firstItem="zmc-qg-g1a" firstAttribute="centerX" secondItem="haD-XZ-KtJ" secondAttribute="centerX" id="z7L-tT-HjO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addMediaButton" destination="26N-5a-xvs" id="5qk-rE-bIZ"/>
+                        <outlet property="captionTextField" destination="XOr-l5-kcY" id="qUd-mv-Xv4"/>
+                        <outlet property="mediaImageView" destination="zmc-qg-g1a" id="6GR-eS-MxN"/>
+                        <outlet property="userImageView" destination="ZUm-vp-i0D" id="uWD-Pj-GX0"/>
+                        <outlet property="view" destination="ivZ-Uz-r0n" id="T8Y-Y2-gFA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haI-9e-EgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571" y="21"/>
+        </scene>
+    </scenes>
+</document>
